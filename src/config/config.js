@@ -6,6 +6,8 @@ import Env from './Env'
 let config = {
   env: Env,
   views: [
+    'e01_component',
+    'e02_component',
     'l01_helloWorld',
     'l02_v-once',
     'l03_v-html',

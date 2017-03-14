@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * @authors Your Name (you@example.org)
  * @date    2016-11-27 16:17:27
  * @version $Id$
@@ -30,5 +30,5 @@
 </template>
 
 <style scoped>
-  
+
 </style>

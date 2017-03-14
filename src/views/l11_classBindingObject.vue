@@ -31,5 +31,5 @@
   .class-b:after {
     content: ':class-b';
   }
-  
+
 </style>

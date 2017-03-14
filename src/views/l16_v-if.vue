@@ -3,7 +3,7 @@
     data () {
       return {
         species: 'dog',
-        isWarning: false
+        isWarning: true
       }
     }
   }
