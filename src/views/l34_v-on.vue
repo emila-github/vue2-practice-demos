@@ -66,9 +66,9 @@
    <h3>为按键提供别名</h3>
    <form action="" v-on:submit.prevent="onSubmit">
      <input type="text" >
-     <input v-on:keyup.enter="submit">
+     <input type="submit" v-on:keyup.enter="submit">
      <!-- 缩写语法 -->
      <!-- <input @keyup.enter="submit"> -->
-   </form> 
+   </form>
   </div>
 </template>

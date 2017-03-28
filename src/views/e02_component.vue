@@ -1,13 +1,4 @@
 <script>
-  import Vue from 'vue'
-  // Define a new component called todo-item
-  Vue.component('todo-item', {
-    // The todo-item component now accepts a
-    // "prop", which is like a custom attribute.
-    // This prop is called todo.
-    props: ['todo'],
-    template: '<li>{{ todo.text }}</li>'
-  })
   export default {
     data () {
       return {
@@ -16,6 +7,16 @@
           { text: 'Cheese' },
           { text: 'Whatever else humans are supposed to eat' }
         ]
+      }
+    },
+    components: {
+      // Define a new component called todo-item
+      'todo-item': {
+        // The todo-item component now accepts a
+        // "prop", which is like a custom attribute.
+        // This prop is called todo.
+        props: ['todo'],
+        template: '<li>{{ todo.text }}</li>'
       }
     }
   }
