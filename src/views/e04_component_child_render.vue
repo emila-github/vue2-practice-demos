@@ -1,5 +1,10 @@
 <script>
   import child from '../components/child'
+
+  const childOther = {
+    template: '<div>A custom componts!</div>'
+  }
+
   export default {
     data () {
       return {
@@ -11,6 +16,7 @@
       }
     },
     components: {
+      childOther,
       // 将子组件作为子子组件
       'child-render': {
         props: ['myMessage'],
@@ -41,6 +47,16 @@
         render: function (createElement) {
           return createElement('li', this.todo.text)
         }
+      },
+      'todo-item-es6': {
+        // The todo-item component now accepts a
+        // "prop", which is like a custom attribute.
+        // This prop is called todo.
+        props: ['todo'],
+          // template: '<li>{{ todo.text }}</li>'
+        render (createElement) {
+          return createElement('li', this.todo.text)
+        }
       }
     }
   }
@@ -48,11 +64,13 @@
 
 <template>
   <div>
+    <child-other></child-other>
     <child-render my-message="hello!"></child-render>
     <ol>
       <!-- Now we provide each todo-item with the todo object    -->
       <!-- it's representing, so that its content can be dynamic -->
       <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+      <todo-item-es6 v-for="item in groceryList" v-bind:todo="item"></todo-item-es6>
     </ol>
   </div>
 </template>
