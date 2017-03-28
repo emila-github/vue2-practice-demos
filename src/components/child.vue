@@ -4,5 +4,5 @@
   }
 </script>
 <template>
-  <div>{{ myMessage }}</div>
+  <div>child:{{ myMessage }}</div>
 </template>

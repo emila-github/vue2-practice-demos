@@ -9,6 +9,7 @@ let config = {
     'e01_component',
     'e02_component',
     'e03_component_child',
+    'e04_component_child_render',
     'l01_helloWorld',
     'l02_v-once',
     'l03_v-html',
