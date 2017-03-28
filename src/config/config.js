@@ -8,6 +8,7 @@ let config = {
   views: [
     'e01_component',
     'e02_component',
+    'e03_component_child',
     'l01_helloWorld',
     'l02_v-once',
     'l03_v-html',
