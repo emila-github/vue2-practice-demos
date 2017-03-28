@@ -13,6 +13,9 @@
             <footer>
               <slot name="footer"></slot>
             </footer>
+            <div>
+              <slot name="flex">右侧默认浮沉</slot>
+            </div>
           </div>`
       }
     }
