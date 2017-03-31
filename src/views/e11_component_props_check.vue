@@ -9,6 +9,7 @@
         currency: 0,
         custom: 'custom',
         custom2: 'custom2',
+        custom3: 'custom3',
         number: 111,
         something: 'somethinginit'
       }
@@ -30,9 +31,16 @@
     <h3>普通单控件组件</h3>
     <custom-input v-model="custom"></custom-input>[custom={{custom}}]<br/>
     <h3>普通多控件组件</h3>
-    <custom2-input @input="custom = arguments[0]" :custom="custom"
-                   v-on:input2="custom2 = arguments[0]" v-bind:custom2="custom2"></custom2-input>
-    [custom={{custom}};custom2={{custom2}}]<br/>
+    <custom2-input :custom="custom"
+                   @input="custom = arguments[0]"
+                   v-bind:custom2="custom2"
+                   v-on:input2="custom2 = arguments[0]"
+                   :custom3 = "custom3"
+                   @input3 = "custom3 = arguments[0]"
+      ></custom2-input>
+    // custom， custom2 都是父子组件联动
+    // custom3 组件内部联动
+    [custom={{custom}};custom2={{custom2}};custom3={{custom3}};]<br/>
 
     <h3>数值单控件组件</h3>
     <number-input v-model="number"></number-input>[custom={{number}}]<br/>

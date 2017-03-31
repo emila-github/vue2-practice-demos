@@ -4,12 +4,19 @@
       return {
 //        dcustom: this.$props.custom,
 //        dcustom2: this.$props.custom2
+        dcustom3: this.$props.custom3
       }
     },
     components: {
     },
-    props: ['custom2', 'custom'],
+    props: ['custom3', 'custom2', 'custom'],
     methods: {
+      updateValue3: function (value) {
+        var formattedValue = value
+        console.log('updateValue3 this.$refs=', this.$refs)
+        this.$refs.custom3.value = formattedValue
+//        this.$emit('input3', formattedValue)
+      },
       // Instead of updating the value directly, this
       // method is used to format and place constraints
       // on the input's valuehai song
@@ -55,6 +62,13 @@
       v-on:input="updateValue2($event.target.value)"
       >
     (custom2={{custom2}})
+     -
+    <input
+      ref="custom3"
+      :value = "dcustom3"
+      v-on:input = "dcustom3 = $event.target.value"
+      >
+    (custom3={{dcustom3}})
       </span>
 </template>
 
