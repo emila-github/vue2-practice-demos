@@ -25,10 +25,17 @@
 <template>
   <div>
     <h2>prop </h2>
-    <!--<currency-input v-model="currency"></currency-input>[currency={{currency}}]<br/>-->
-    <!--<custom-input v-model="custom"></custom-input>[custom={{custom}}]<br/>-->
-    <custom2-input @input="custom = arguments[0]" :custom="custom" v-on:input2="custom2 = arguments[0]" :custom2="custom2"></custom2-input>[custom={{custom}};custom2={{custom2}}]<br/>
-    <!--<number-input v-model="number"></number-input>[custom={{number}}]<br/>-->
+    <h3>货币单控件组件</h3>
+    <currency-input v-model="currency"></currency-input>[currency={{currency}}]<br/>
+    <h3>普通单控件组件</h3>
+    <custom-input v-model="custom"></custom-input>[custom={{custom}}]<br/>
+    <h3>普通多控件组件</h3>
+    <custom2-input @input="custom = arguments[0]" :custom="custom"
+                   v-on:input2="custom2 = arguments[0]" :custom2="custom2"></custom2-input>
+    [custom={{custom}};custom2={{custom2}}]<br/>
+
+    <h3>数值单控件组件</h3>
+    <number-input v-model="number"></number-input>[custom={{number}}]<br/>
     <!-- <child :my-message="parentMsg"></child> -->
   </div>
 </template>
