@@ -31,7 +31,7 @@
     <custom-input v-model="custom"></custom-input>[custom={{custom}}]<br/>
     <h3>普通多控件组件</h3>
     <custom2-input @input="custom = arguments[0]" :custom="custom"
-                   v-on:input2="custom2 = arguments[0]" :custom2="custom2"></custom2-input>
+                   v-on:input2="custom2 = arguments[0]" v-bind:custom2="custom2"></custom2-input>
     [custom={{custom}};custom2={{custom2}}]<br/>
 
     <h3>数值单控件组件</h3>
