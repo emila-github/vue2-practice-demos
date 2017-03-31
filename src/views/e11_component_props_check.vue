@@ -37,10 +37,12 @@
                    v-on:input2="custom2 = arguments[0]"
                    :custom3 = "custom3"
                    @input3 = "custom3 = arguments[0]"
-      ></custom2-input>
-    // custom， custom2 都是父子组件联动
-    // custom3 组件内部联动
-    [custom={{custom}};custom2={{custom2}};custom3={{custom3}};]<br/>
+      ></custom2-input><br/>
+    // custom， custom2 都是父子组件联动<br/>
+    [custom={{custom}};]<br/>
+    [custom2={{custom2}};]<br/>
+    // custom3 组件内部联动<br/>
+    [custom3={{custom3}};]<br/>
 
     <h3>数值单控件组件</h3>
     <number-input v-model="number"></number-input>[custom={{number}}]<br/>

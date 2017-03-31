@@ -54,21 +54,25 @@
       v-bind:value="custom"
       v-on:input="updateValue($event.target.value)"
       >
-    (custom={{custom}})
+    (custom={{custom}})<br/>
     -
     <input
       ref="custom2"
       v-bind:value="custom2"
       v-on:input="updateValue2($event.target.value)"
       >
-    (custom2={{custom2}})
+    (custom2={{custom2}})<br/>
      -
     <input
       ref="custom3"
       :value = "dcustom3"
       v-on:input = "dcustom3 = $event.target.value"
       >
-    (custom3={{dcustom3}})
+      <!--<input>
+        ref="custom3"
+        v-model = "dcustom3"
+       >-->
+    (custom3={{dcustom3}})<br/>
       </span>
 </template>
 
