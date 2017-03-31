@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * @authors sean(eli01linux@aliyun.com)
  * @date    2016-12-07 16:53:08
  */
@@ -78,8 +78,8 @@
     <input type="number" v-model.number="secondNumber" step="20"> =
     {{ result }}
     <p>
-      <animated-integer :value="firstNumber"></animated-integer> + 
-      <animated-integer :value="secondNumber"></animated-integer> = 
+      <animated-integer :value="firstNumber"></animated-integer> +
+      <animated-integer :value="secondNumber"></animated-integer> =
       <animated-integer :value="result"></animated-integer>
     </p>
   </div>

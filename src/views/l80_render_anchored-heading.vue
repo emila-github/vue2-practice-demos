@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * @authors sean(eli01linux@aliyun.com)
  * @date    2016-12-07 18:08:41
  */
@@ -11,6 +11,7 @@
    * @return {string}  拼接在一起的文本
    */
   var getChilddrenTextContent = function (children) {
+    console.log('getChilddrenTextContent=', children)
     return children.map((node) => {
       return node.children
         ? getChilddrenTextContent(node.children)
@@ -64,12 +65,12 @@
 
 <template>
   <div>
-    <anchored-heading>
+    <anchored-heading :level="1">
       <p><em>标题党</em>去死！去死！去死！</p>
     </anchored-heading>
   </div>
 </template>
 
 <style scoped>
-  
+
 </style>
