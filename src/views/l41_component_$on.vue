@@ -1,11 +1,11 @@
 /**
- * 
+ *
  * @authors sean(eli01linux@aliyun.com)
  * @date    2016-11-28 18:37:58
  */
 <script>
   import Vue from 'Vue'
-  
+
   export default {
     data () {
       return {
@@ -20,7 +20,10 @@
         `,
         props: ['bus'],
         created () {
-          this.bus.$on('id-selected', id => {
+//          this.bus.$on('id-selected', id => {
+//            window.alert('I am child1.' + id + ' is received!')
+//          })
+          this.bus.$on('id-selected', function (id) {
             window.alert('I am child1.' + id + ' is received!')
           })
         }
@@ -45,11 +48,12 @@
 
 <template>
   <div>
+    <h2>#非父子组件通信</h2>
     <child1 :bus="bus"></child1>
     <child2 :bus="bus"></child2>
   </div>
 </template>
 
 <style scoped>
-  
+
 </style>
