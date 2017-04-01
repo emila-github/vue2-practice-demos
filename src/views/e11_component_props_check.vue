@@ -3,9 +3,18 @@
   import customInput from './e11_component_props_check/custom-input'
   import custom2Input from './e11_component_props_check/custom2-input'
   import numberInput from './e11_component_props_check/number-input'
+  import exampleProps from './e11_component_props_check/example-props'
   export default {
     data () {
       return {
+        propA: 1,
+        propB: '2',
+        propC: '2',
+        propE: {
+          a: 'a1',
+          b: 'b1'
+        },
+        propF: 20,
         currency: 0,
         custom: 'custom',
         custom2: 'custom2',
@@ -15,6 +24,7 @@
       }
     },
     components: {
+      'example-props': exampleProps,
       'currency-input': currencyInput,
       'number-input': numberInput,
       'custom2-input': custom2Input,
@@ -47,6 +57,18 @@
     <h3>数值单控件组件</h3>
     <number-input v-model="number"></number-input>[custom={{number}}]<br/>
     <!-- <child :my-message="parentMsg"></child> -->
+
+    <h3>#Prop-验证</h3>
+    <h4>我们可以为组件的 props 指定验证规格。如果传入的数据不符合规格，Vue 会发出警告。当组件给其他人使用时，这很有用。</h4>
+    <example-props
+      :propA = "propA"
+      :propB = "propB"
+      :propC = "propC"
+      :propE = "propE"
+      :propF = "propF"
+      ></example-props>
+
+
   </div>
 </template>
 
