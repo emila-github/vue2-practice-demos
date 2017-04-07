@@ -17,6 +17,8 @@ let config = {
     'e09_component_props_var',
     'e10_component_props_write',
     'e11_component_props_check',
+    'e12_render-function-v-model',
+    'e13_component_tab',
     'l01_helloWorld',
     'l02_v-once',
     'l03_v-html',

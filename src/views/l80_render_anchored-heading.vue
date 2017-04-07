@@ -22,6 +22,8 @@
   // 具备锚点功能的额标题组件
   Vue.component('anchored-heading', {
     render (createElement) {
+      console.log('this.$slots.default=', this.$slots.default)
+      console.log('headingId=', getChilddrenTextContent(this.$slots.default))
       // 作为唯一识别的字符串
       const headingId = getChilddrenTextContent(this.$slots.default)
         .toLowerCase()
